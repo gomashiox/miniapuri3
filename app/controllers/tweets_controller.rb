@@ -12,9 +12,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    binding.pry
     Tweet.create(text: tweet_params[:text], user_id: current_user.id)
-    binding.pry
   end
 
   def destroy
